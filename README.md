@@ -58,7 +58,7 @@ Este projeto está sob a Licença MIT. Consulte o arquivo LICENSE para mais deta
 
 ## 📞 Contato
 
-Informações de contato disponíveis no próprio portfólio.
+Informações de contato disponíveis no próprio portfólio ou basta entrar em contato pelas informações disponíveis AQUI.
 
 - Telefone: (46) 99971-1937
 - E-mail: daltonneres1@gmail.com
