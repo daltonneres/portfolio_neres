@@ -15,6 +15,15 @@
     </ul>
   </nav>
 
+  <div class="acessibilidade-container">
+    <button class="acessibilidade-toggle" onclick="toggleAcessibilidade()">Acessibilidade</button>
+    <div class="acessibilidade-menu" id="acessibilidadeMenu">
+      <button onclick="ajustarFonte('aumentar')" class="font-btn">A+</button>
+      <button onclick="ajustarFonte('diminuir')" class="font-btn">A-</button>
+      <button onclick="toggleContraste()" class="font-btn">Alto Contraste</button>
+    </div>
+  </div>
+
   <section class="fade-in">
     <h2>Entre em Contato</h2>
     <form action="https://formsubmit.co/daltonjoseneres7@gmail.com" method="POST">
@@ -27,7 +36,8 @@
   </section>
 
   <section class="fade-in contatos">
-    <p>Email: <a href="mailto:daltonjoseneres7@gmail.com">daltonjoseneres7@gmail.com</a></p>
+    <h2>Entre em contato comigo, conheça mais sobre meu trabalho e vamos trabalhar juntos!</h2>
+    <p>Email: <a href="mailto:daltonjoseneres7@gmail.com">daltonneres1@gmail.com</a></p>
     <p>WhatsApp: <a href="https://wa.me/5546999711937" target="_blank">(46) 99971-1937</a></p>
     <p>Instagram: <a href="https://instagram.com/dalton_neres" target="_blank">@dalton_neres</a></p>
     <p>GitHub: <a href="https://github.com/neresdaltonn" target="_blank">neresdaltonn</a></p>
@@ -38,5 +48,45 @@
   </div>
 
   <script src="js/script.js"></script>
+
+    <!-- Rodapé -->
+  <footer class="footer">
+<p>Dalton José Neres - 2025 - Todos os direitos reservados.</p>
+<p>Salto do Lontra, PR — Criatividade e inovação em cada projeto.</p>
+  </footer>
+
+  <script>
+    let tamanhoFonteAtual = 100;
+    let contrasteAtivo = false;
+
+    function ajustarFonte(acao) {
+      if (acao === 'aumentar') {
+        tamanhoFonteAtual += 10;
+      } else if (acao === 'diminuir') {
+        tamanhoFonteAtual = Math.max(60, tamanhoFonteAtual - 10);
+      }
+      document.body.style.fontSize = `${tamanhoFonteAtual}%`;
+    }
+
+    function toggleContraste() {
+      contrasteAtivo = !contrasteAtivo;
+      document.body.classList.toggle('alto-contraste', contrasteAtivo);
+    }
+
+    function toggleAcessibilidade() {
+      const menu = document.getElementById("acessibilidadeMenu");
+      menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+    }
+  </script>
+
+  <script>
+    let contrasteativo = false;
+
+    function toggleContraste() {
+      contrasteAtivo = !contrasteAtivo;
+      document.body.classList.toggle('alto-contraste', contrasteAtivo);
+    }
+  </script>
+
 </body>
 </html>

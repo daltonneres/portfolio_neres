@@ -16,6 +16,16 @@
       <li><a href="contato.html">Contato</a></li>
     </ul>
   </nav>
+  
+  <div class="acessibilidade-container">
+    <button class="acessibilidade-toggle" onclick="toggleAcessibilidade()">Acessibilidade</button>
+    <div class="acessibilidade-menu" id="acessibilidadeMenu">
+      <button onclick="ajustarFonte('aumentar')" class="font-btn">A+</button>
+      <button onclick="ajustarFonte('diminuir')" class="font-btn">A-</button>
+      <button onclick="toggleContraste()" class="font-btn">Alto Contraste</button>
+    </div>
+  </div>
+
   <section class="banner">
     <div class="overlay">
       <h1>Dalton José Neres</h1>
@@ -23,7 +33,48 @@
       <p>Transformando ideias em experiências digitais.</p>
       <a href="sobre.html" class="btn">Conheça Meu Trabalho</a>
     </div>
-  </section>  
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="footer">
+<p>Dalton José Neres - 2025 - Todos os direitos reservados.</p>
+<p>Salto do Lontra, PR — Criatividade e inovação em cada projeto.</p>
+  </footer>
+
   <script src="js/script.js"></script>
+
+  <script>
+    let tamanhoFonteAtual = 100;
+    let contrasteAtivo = false;
+
+    function ajustarFonte(acao) {
+      if (acao === 'aumentar') {
+        tamanhoFonteAtual += 10;
+      } else if (acao === 'diminuir') {
+        tamanhoFonteAtual = Math.max(60, tamanhoFonteAtual - 10);
+      }
+      document.body.style.fontSize = `${tamanhoFonteAtual}%`;
+    }
+
+    function toggleContraste() {
+      contrasteAtivo = !contrasteAtivo;
+      document.body.classList.toggle('alto-contraste', contrasteAtivo);
+    }
+
+    function toggleAcessibilidade() {
+      const menu = document.getElementById("acessibilidadeMenu");
+      menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+    }
+  </script>
+
+  <script>
+    let contrasteativo = false;
+
+    function toggleContraste() {
+      contrasteAtivo = !contrasteAtivo;
+      document.body.classList.toggle('alto-contraste', contrasteAtivo);
+    }
+  </script>
+
   </body>
   </html>  

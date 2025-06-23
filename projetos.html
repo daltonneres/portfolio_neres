@@ -1,11 +1,12 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <title>Projetos - Dalton Neres</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
   <nav>
     <ul>
@@ -15,15 +16,67 @@
       <li><a href="contato.html">Contato</a></li>
     </ul>
   </nav>
+
+  <div class="acessibilidade-container">
+    <button class="acessibilidade-toggle" onclick="toggleAcessibilidade()">Acessibilidade</button>
+    <div class="acessibilidade-menu" id="acessibilidadeMenu">
+      <button onclick="ajustarFonte('aumentar')" class="font-btn">A+</button>
+      <button onclick="ajustarFonte('diminuir')" class="font-btn">A-</button>
+      <button onclick="toggleContraste()" class="font-btn">Alto Contraste</button>
+    </div>
+  </div>
+
   <section class="fade-in">
     <h2>Meus Projetos</h2>
     <p>Seja bem vindo(a)!</p>
-      <p>Está é a área de desenvolvimento dos meus sites, atualmente trago apenas projetos estudantis, mas com grande impacto e resolução de problemas na sociedade!</p>
+    <p>Aqui você verá minha principal forma de trabalho! Capaz de trasformar imagens, textos, opiniões, ideias, papeis.
+      Em sites e até mesmo aplicativos, que impactem no mercado e faça o SEU NEGÓCIO CRESCER1 Atualmente trago apenas
+      projetos estudantis, mas com grande impacto e resolução de problemas na sociedade!</p>
     <p>Em breve nossos sites estarão disponiveis, AGUARDEM!</p>
   </section>
   <script src="js/script.js"></script>
   <div class="btn-container">
     <a href="index.html" class="btn">Voltar para o Início</a>
   </div>
-  </body>
-  </html>   
+  
+  <!-- Rodapé -->
+  <footer class="footer">
+<p>Dalton José Neres - 2025 - Todos os direitos reservados.</p>
+<p>Salto do Lontra, PR — Criatividade e inovação em cada projeto.</p>
+  </footer>
+
+  <script>
+    let tamanhoFonteAtual = 100;
+    let contrasteAtivo = false;
+
+    function ajustarFonte(acao) {
+      if (acao === 'aumentar') {
+        tamanhoFonteAtual += 10;
+      } else if (acao === 'diminuir') {
+        tamanhoFonteAtual = Math.max(60, tamanhoFonteAtual - 10);
+      }
+      document.body.style.fontSize = `${tamanhoFonteAtual}%`;
+    }
+
+    function toggleContraste() {
+      contrasteAtivo = !contrasteAtivo;
+      document.body.classList.toggle('alto-contraste', contrasteAtivo);
+    }
+
+    function toggleAcessibilidade() {
+      const menu = document.getElementById("acessibilidadeMenu");
+      menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+    }
+  </script>
+
+  <script>
+    let contrasteativo = false;
+
+    function toggleContraste() {
+      contrasteAtivo = !contrasteAtivo;
+      document.body.classList.toggle('alto-contraste', contrasteAtivo);
+    }
+  </script>
+
+</body>
+</html>

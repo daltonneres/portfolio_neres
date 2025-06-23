@@ -15,6 +15,16 @@
       <li><a href="contato.html">Contato</a></li>
     </ul>
   </nav>
+
+  <div class="acessibilidade-container">
+    <button class="acessibilidade-toggle" onclick="toggleAcessibilidade()">Acessibilidade</button>
+    <div class="acessibilidade-menu" id="acessibilidadeMenu">
+      <button onclick="ajustarFonte('aumentar')" class="font-btn">A+</button>
+      <button onclick="ajustarFonte('diminuir')" class="font-btn">A-</button>
+      <button onclick="toggleContraste()" class="font-btn">Alto Contraste</button>
+    </div>
+  </div>
+
   <section class="sobre fade-in">
     <h2>Sobre Mim:</h2>
     <p>Olá! Muito prazer me chamo Dalton josé Neres, tenho atualmente 17 anos, sou estudante do 3°Ano do Ensino Médio e obviamente sou apaixonado por tecnologia!</p>
@@ -25,7 +35,7 @@
     <p>Meu principal/objetivo foco como desenvolver será aplicar recursos acessiveis para qualuqer pessoa, que utilize dos recursos tecnologicos, como por exemplo IA;</p>
     <p>Espero algum dia no futuro, pode ajudar a trasformar vidas com o apoio da tecnologia!</p>
     <p>ESPERO ANSIOSAMENTE POR VOCÊ NOS PRÓXIMOS CAPÍTULOS!</p>
-    <img src="img/dalton.jpg" alt="Dalton Neres" class="profile-pic">
+    <img src="img/dalton.jpg" alt="Dalton Neres" title="Desenvolvedor: Dalton Neres" class="profile-pic">
   </section>
   <section class="skills fade-in">
     <h2>Minhas Habilidades</h2>
@@ -40,5 +50,46 @@
   <div class="btn-container">
     <a href="index.html" class="btn">Voltar para o Início</a>
   </div>
+  
+  <!-- Rodapé -->
+  <footer class="footer">
+<p>Dalton José Neres - 2025 - Todos os direitos reservados.</p>
+<p>Salto do Lontra, PR — Criatividade e inovação em cada projeto.</p>
+  </footer>
+
+
+  <script>
+    let tamanhoFonteAtual = 100;
+    let contrasteAtivo = false;
+
+    function ajustarFonte(acao) {
+      if (acao === 'aumentar') {
+        tamanhoFonteAtual += 10;
+      } else if (acao === 'diminuir') {
+        tamanhoFonteAtual = Math.max(60, tamanhoFonteAtual - 10);
+      }
+      document.body.style.fontSize = `${tamanhoFonteAtual}%`;
+    }
+
+    function toggleContraste() {
+      contrasteAtivo = !contrasteAtivo;
+      document.body.classList.toggle('alto-contraste', contrasteAtivo);
+    }
+
+    function toggleAcessibilidade() {
+      const menu = document.getElementById("acessibilidadeMenu");
+      menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+    }
+  </script>
+
+  <script>
+    let contrasteativo = false;
+
+    function toggleContraste() {
+      contrasteAtivo = !contrasteAtivo;
+      document.body.classList.toggle('alto-contraste', contrasteAtivo);
+    }
+  </script>
+
   </body>
   </html>   
