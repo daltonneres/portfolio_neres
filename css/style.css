@@ -174,3 +174,102 @@ a:hover {
   justify-content: center;
   margin-top: 4rem;
 }
+
+/* Rodapé */
+.footer {
+  background: linear-gradient(to right, #000, #3498db, #fff);
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: auto;
+}
+
+/* Menu de Acessibilidade */
+.acessibilidade-container {
+  position: fixed;
+  top: 100px;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.acessibilidade-toggle {
+  background-color: #000;
+  color: white;
+  border: none;
+  padding: 10px 5px; /* Menos largura */
+  border-radius: 8px 0 0 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: transform 0.4s ease;
+  writing-mode: vertical-rl;  /* Faz o texto ficar deitado na vertical */
+  text-orientation: mixed;
+}
+
+.acessibilidade-toggle.rotacionado {
+  transform: rotate(90deg);
+}
+
+.acessibilidade-menu {
+  display: none;
+  flex-direction: column;
+  background-color: #000;
+  border-radius: 8px 0 0 8px;
+  padding: 10px;
+  margin-top: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.font-btn {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  margin: 4px 0;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.font-btn:hover {
+  background-color: #3498db;
+}
+
+body.alto-contraste {
+  background-color: #000 !important;
+  color: #FFD700 !important;
+}
+
+body.alto-contraste header,
+body.alto-contraste .content-section,
+body.alto-contraste .gallery-item,
+body.alto-contraste .recipe-item,
+body.alto-contraste .produto,
+body.alto-contraste .footer,
+body.alto-contraste .weather-button,
+body.alto-contraste .botao-link,
+body.alto-contraste .ampliar-btn,
+body.alto-contraste .btn-receitas,
+body.alto-contraste .btn-galeria {
+  background-color: #000 !important;
+  color: #FFD700 !important;
+  border: 1px solid #FFD700;
+}
+
+body.alto-contraste a {
+  color: #FFD700 !important;
+}
+
+body.alto-contraste img {
+  filter: brightness(0.8) contrast(1.5);
+}
+
+body.alto-contraste .intro {
+  background: #000 !important;
+  color: #FFD700 !important;
+}
