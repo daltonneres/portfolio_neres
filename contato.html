@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <title>Contato - Dalton Neres</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
   <nav>
     <ul>
@@ -30,7 +32,10 @@
       <input type="text" name="nome" placeholder="Seu nome" required>
       <input type="email" name="email" placeholder="Seu email" required>
       <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
-      <input type="hidden" name="_next" value="https://680068aa5444ec6b83066ded--neon-tiramisu-5cdc9d.netlify.app/obrigado.html">
+
+      <!-- Proteções extras -->
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://daltonneres.github.io/portfolio_neres/obrigado.html">
       <button type="submit">Enviar</button>
     </form>
   </section>
@@ -46,14 +51,6 @@
   <div class="btn-container">
     <a href="index.html" class="btn">Voltar para o Início</a>
   </div>
-
-  <script src="js/script.js"></script>
-
-    <!-- Rodapé -->
-  <footer class="footer">
-<p>Dalton José Neres - 2025 - Todos os direitos reservados.</p>
-<p>Salto do Lontra, PR — Criatividade e inovação em cada projeto.</p>
-  </footer>
 
   <script>
     let tamanhoFonteAtual = 100;
@@ -87,6 +84,12 @@
       document.body.classList.toggle('alto-contraste', contrasteAtivo);
     }
   </script>
+  <!-- Rodapé -->
+  <footer class="footer">
+    <p>Dalton José Neres - 2025 - Todos os direitos reservados.</p>
+    <p>Salto do Lontra, PR — Criatividade e inovação em cada projeto.</p>
+  </footer>
 
 </body>
+
 </html>
