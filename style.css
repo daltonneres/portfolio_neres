@@ -37,7 +37,7 @@ nav a:hover {
 /* Banner */
 .banner {
   height: 70vh;
-  background: linear-gradient(to right, #000, #3498db, #fff);
+  background:#000;
   display: flex;
   align-items: center;
   justify-content: center;
