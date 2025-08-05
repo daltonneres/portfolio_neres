@@ -13,7 +13,15 @@ document.addEventListener('DOMContentLoaded', () => {
     appearOnScroll.observe(section);
   });
 });
-const textos = ["Front-End Developer", "Estudante de Banco de Dados", "Apaixonado por Tecnologia"];
+const textos = [
+  "Full-Stack Developer com visão de produto",
+  "Domino o front, resolvo o back",
+  "Estudioso hardcore de IA e dados",
+  "faço projetos desde os 16 — e não parei mais",
+  "Tecnologia é meu idioma nativo",
+  "Transformo ideias em soluções digitais",
+  "Apaixonado por criar, otimizar e escalar"
+];
 let i = 0;
 setInterval(() => {
   document.getElementById("text-dinamico").textContent = textos[i];
